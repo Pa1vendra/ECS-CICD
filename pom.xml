@@ -11,7 +11,7 @@
 	</parent>
 
 	<groupId>org.worldbuild.project</groupId>
-	<artifactId>aws-ecs-cicd</artifactId>
+	<artifactId>wb-ecs-cicd-project</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>wb-aws-ecs-cicd-project</name>
 	<description>AWS ecs cicd pipeline project</description>
