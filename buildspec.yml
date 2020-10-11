@@ -10,13 +10,14 @@ phases:
       - mvn clean install
   post_build:
     commands:
+      - ls
       - echo Entered the post build phase...
       - echo Build completed on `date`
 artifacts:
-  files:
-    - target/aws-sdk.tar.gz
-    - scripts/deploy.sh
-    - appspec.yml
+  #files:
+    #- target/aws-sdk.tar.gz
+    #- scripts/deploy.sh
+    #- appspec.yml
   #discard-paths: yes
 cache:
   paths:
