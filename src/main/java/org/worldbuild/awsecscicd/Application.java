@@ -22,6 +22,9 @@ public class Application implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		log.info("Current Date =====> "+new Date());
+		while (true) {
+			log.info("Current Date =====> " + new Date());
+			Thread.sleep(1000*5);
+		}
 	}
 }
