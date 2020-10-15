@@ -11,6 +11,7 @@ phases:
       - echo $AWS_DEFAULT_REGION
       - echo $REPOSITORY_URI
       - echo $ACCOUNT_ID
+      - echo $PROJECT_NAME
 
   build:
     commands:
