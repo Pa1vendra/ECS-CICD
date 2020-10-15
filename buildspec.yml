@@ -4,9 +4,13 @@ phases:
     commands:
       - echo Logging in to Amazon ECR...
       - aws --version
+      - mvn --version
       #- aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 726652658490.dkr.ecr.ap-south-1.amazonaws.com
       - $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
       - REPOSITORY_URI=726652658490.dkr.ecr.ap-south-1.amazonaws.com/ecs-cicd
+      - echo $AWS_DEFAULT_REGION
+      - echo $REPOSITORY_URI
+
   build:
     commands:
       - echo Build started on `date`
@@ -18,12 +22,12 @@ phases:
       - mvn clean install
       - echo Building the Docker image...
       - docker build -t ecs-cicd:latest .
-      - docker tag ecs-cicd:latest REPOSITORY_URI:latest
+      - docker tag ecs-cicd:latest $REPOSITORY_URI:latest
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
-      - docker push REPOSITORY_URI:latest
+      - docker push $REPOSITORY_URI:latest
 #artifacts:
   #files:
     #- target/aws-sdk.tar.gz
