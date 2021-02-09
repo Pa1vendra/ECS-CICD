@@ -8,6 +8,8 @@ cloud:
       auto: false
 spring:
   mvc:
+    favicon:
+      enabled: true
     throw-exception-if-no-handler-found: true
     thymeleaf:
       enabled: true

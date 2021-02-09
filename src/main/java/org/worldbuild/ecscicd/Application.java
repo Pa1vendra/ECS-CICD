@@ -1,4 +1,4 @@
-package org.worldbuild.awsecscicd;
+package org.worldbuild.ecscicd;
 
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
