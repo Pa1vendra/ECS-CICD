@@ -8,7 +8,7 @@ phases:
       - mvn --version
       #- aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 726652658490.dkr.ecr.ap-south-1.amazonaws.com
       - $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
-      - REPOSITORY_URI=726652658490.dkr.ecr.ap-south-1.amazonaws.com/ecs-cicd
+      - REPOSITORY_URI=168231923555.dkr.ecr.ap-south-1.amazonaws.com/ecs-project
       - echo $AWS_DEFAULT_REGION
       - echo $REPOSITORY_URI
       - echo $ACCOUNT_ID
